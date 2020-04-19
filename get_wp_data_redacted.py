@@ -32,11 +32,11 @@ if __name__ == "__main__":
     api = PushshiftAPI(r)
 
     # Get submission data
-    submission_gen = api.search_submissions(subreddit=TARGET_SUB, after=START_EPOCH)
+    submission_gen = api.search_submissions(subreddit=TARGET_SUB, after=START_EPOCH, before=END_EPOCH)
     df = pd.DataFrame([submission.__dict__ for submission in submission_gen])
     df.to_csv(path_or_buf=SUBMISSION_DEST_FILE)
 
     # Get comment data
-    comment_gen = api.search_comments(subreddit="WritingPrompts", after=START_EPOCH)
+    comment_gen = api.search_comments(subreddit="WritingPrompts", after=START_EPOCH, before=END_EPOCH)
     df2 = pd.DataFrame([comment.__dict__ for comment in comment_gen])
     df2.to_csv(path_or_buf=COMMENT_DEST_FILE)
