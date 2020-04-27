@@ -6,11 +6,11 @@ library(tidyverse)
 library(lubridate)
 library(stringi)
 
-SUBM_PATH <- "C:/Users/awitt/Desktop/Data Projects/rWP_comp_mod/wp_raw_subm_apr4_to_apr13_on_apr17.csv"
-COMM_PATH <- "C:/Users/awitt/Desktop/Data Projects/rWP_comp_mod/wp_raw_comm_apr4_to_apr13_on_apr17.csv"
+SUBM_PATH <- "wp_raw_subm_apr4_to_apr13_on_apr17.csv"
+COMM_PATH <- "wp_raw_comm_apr4_to_apr13_on_apr17.csv"
 
-SUBM_DEST <- "C:/Users/awitt/Desktop/Data Projects/rWP_comp_mod/wp_clean_subm_apr18_to_apr13_on_apr17.csv"
-COMM_DEST <- "C:/Users/awitt/Desktop/Data Projects/rWP_comp_mod/wp_clean_comm_apr18_to_apr13_on_apr17.csv"
+SUBM_DEST <- "wp_clean_subm_apr18_to_apr13_on_apr17.csv"
+COMM_DEST <- "wp_clean_comm_apr18_to_apr13_on_apr17.csv"
 
 clean_comments <- function(path) {
   comms <- read_csv(path)
